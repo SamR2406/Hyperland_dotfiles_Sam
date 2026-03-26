@@ -185,9 +185,8 @@
     "on-click": "~/.config/waybar/scripts/wifi-picker.sh"
 },
 "custom/pia": {
-    "exec": "~/.config/waybar/scripts/pia.sh",
+    "exec": "bash -c 'while true; do ~/.config/waybar/scripts/pia.sh; sleep 2; done'",
     "return-type": "json",
-    "interval": 5,
     "on-click": "/opt/piavpn/bin/pia-client"
 },
     "bluetooth": {
