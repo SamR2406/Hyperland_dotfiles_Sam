@@ -31,6 +31,9 @@
         "custom/pia",
         "custom/network",
         "bluetooth",
+        "backlight",
+        "battery",
+        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
@@ -58,8 +61,7 @@
 	"format": "{name}",
 	
        "persistent-workspaces": {
-             "*": 5, // 5 workspaces by default on every monitor
-             "DP-2": 2 // but only three on HDMI-A-1
+             "*": 5 // 5 workspaces by default on every monitor
        }
 },
     "keyboard-state": {
@@ -182,7 +184,8 @@
     "exec": "~/.config/waybar/scripts/network.sh",
     "return-type": "json",
     "interval": 5,
-    "on-click": "~/.config/waybar/scripts/wifi-picker.sh"
+    "on-click": "~/.config/waybar/scripts/wifi-picker.sh",
+    "on-click-right": "nmcli radio wifi off"
 },
 "custom/pia": {
     "exec": "bash -c 'while true; do ~/.config/waybar/scripts/pia.sh; sleep 2; done'",

@@ -7,6 +7,10 @@
 
 rofi_cmd="rofi -dmenu -p 󰤨 WiFi -i"
 
+# Make sure WiFi is enabled before scanning. This lets left-click recover
+# after right-click disabled the radio.
+nmcli radio wifi on 2>/dev/null
+
 # Scan for networks
 notify-send "󰤨 WiFi" "Scanning for networks..." -t 2000
 
